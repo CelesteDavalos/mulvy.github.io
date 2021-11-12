@@ -1360,6 +1360,7 @@ html {
 	padding: 5%;
 	background-color:rgba(255, 255, 255, 80%);
 	border-radius: 50px;
+	border: 5px solid red;
 }
 
 .sintomas article {
