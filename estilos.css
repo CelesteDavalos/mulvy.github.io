@@ -1,0 +1,2302 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*-----------------BODY-----------------*/
+
+* {
+	list-style: none;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	color: #4E4E4E;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+	color:#9B5DE5;
+}
+
+p {
+	font-size: 25px;
+}
+
+
+/*-----------------HEADER GENERAL-----------------*/
+
+header {
+    padding: 15px 10%;
+	box-sizing: border-box;
+    background-color: #9B5DE5;
+	height: 70px;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+	justify-content: center;
+    align-items: center;
+	position: fixed;
+	top: 0px;
+	z-index: 1000;/*para que quede arriba de todo si hay otra cosa con position*/
+	width: 100%;
+}
+
+/*-----LOGO-----*/
+
+.logo {
+	display: flex;
+	justify-content: flex-start;
+	width: 10%;
+	max-width: 153.6px;/*es para que quede siempre alineado con los márgenes de los costados aunque se agrande la pantalla*/
+}
+
+.logo img {
+	width: 108px;
+	height: auto;
+}
+
+/*-----MENU-----*/
+
+.menu {
+	width: 80%;
+	max-width: 1228.8px;/*es para que quede siempre en el centro aunque se agrande la pantalla después de 1920px*/
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#botones-secciones {
+	background-color: #9B5DE5;
+	display: flex;
+	align-items: center;
+	padding: 0px 50px;
+}
+
+#botones-secciones a {
+	padding: 15px 50px;
+	color: #fff;/*esto afecta tanto a los <a> del menú principal como a los del slide, por eso no hay que ponerle el color de texto en #contenido-slide a*/
+	border-radius: 50px;
+}
+
+#contenido-boton {
+	padding: 15px 50px 25.625px;
+}
+
+#contenido-boton:hover {
+	border-radius: 25px 25px 0px 0px;
+}
+
+#botones-secciones a:hover, #botones-secciones a:active {
+	background-color: #fff;
+	color: #9B5DE5;
+}
+
+/*-----MENU-CONTENIDO-SLIDE-----*/
+
+#contenido-slide {
+	display: none;
+}
+
+#contenido-slide {
+	background-color: #9B5DE5;
+	width: 171.5px;
+	position: absolute;
+	top: 70px;
+	padding: 0px;
+	border: 2px solid #9B5DE5;
+}
+
+#contenido-slide a {
+	padding: 10px 10px 10px 20px;
+	border-radius: 0px;
+	display: block;/*es para que el a ocupe todo el ancho del li y cambie de color todo el botón cuando hay hover, sino cambia solo el ancho del texto*/
+}
+
+#contenido-slide a:hover{
+	background-color: #fff;
+}
+
+#contenido:hover #contenido-boton {
+	background-color: #fff;
+	color: #9B5DE5;
+	padding: 15px 50px 25.625px;
+	border-radius: 25px 25px 0px 0px;
+}
+
+#contenido:hover #contenido-slide{
+	display: flex;
+	flex-direction: column;
+}
+
+/*-----USUARIO-----*/
+
+.usuario {
+	width: 10%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	max-width: 153.6px;/*es para que quede siempre alineado con los márgenes de los costados aunque se agrande la pantalla*/
+}
+
+.foto-perfil {
+	min-width: 30px;/*es para que no se deforme cuando achicamos la pantalla*/
+	min-height: 30px;/*ídem*/
+	border-radius: 100%;
+	background-color: #fff;
+	margin-left: 10px;
+}
+
+.usuario a {
+	color: #fff;
+}
+
+/*-----------------HEADER REGISTRO/INICIAR SESIÓN-----------------*/
+
+.header-blanco {
+    background-color: #fff;
+    color: #9B5DE5;
+}
+
+/*-----MENU-----*/
+
+.header-blanco #botones-secciones {
+	background-color: #fff;
+}
+
+.header-blanco #botones-secciones a {
+	color: #9B5DE5;
+}
+
+.header-blanco #botones-secciones a:hover, #botones-secciones a:active {
+	background-color: #9B5DE5;
+	color: #fff;
+}
+
+/*-----MENU-CONTENIDO-SLIDE-----*/
+
+.header-blanco #contenido-slide {
+	background-color: #fff;
+	color: #9B5DE5;
+	border: 2px solid #fff;
+}
+
+.header-blanco #contenido-slide a:hover{
+	background-color: #9B5DE5;
+}
+
+.header-blanco #contenido:hover #contenido-boton {
+	background-color: #9B5DE5;
+	color: #fff;
+}
+
+/*-----USUARIO-----*/
+
+.header-blanco .foto-perfil {
+	background-color: #9B5DE5;
+}
+
+.header-blanco .usuario a {
+	color: #9B5DE5;
+}
+
+
+
+/*--------------------------------------------------HOME----------------------------------------------------*/
+
+
+/*-----------------MAIN-HOME----------------*/
+
+.main-home {
+	width: 100%;
+	background-image: url("img/home/fondo-home.png");
+	background-size: 100%;
+	position: relative;
+}
+
+.main-home h2 {
+	font-weight: bold;
+	font-size: 50px;
+	padding-bottom: 30px;
+}
+
+/*-----CÍRCULOS-----*/
+
+/*esto es para que al apretar en cada círculo no salte de sección de repente sino que fluya*/
+
+html {
+	scroll-behavior: smooth;
+	transition-duration: 3s;
+}
+
+.circulos {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: 30px;
+	top: 50%;
+}
+
+.circulos li {
+	display: flex;
+	justify-content: center;
+	padding: 2px;
+}
+
+.circulos a {
+	width: 17px;
+	height: 17px;
+	border-radius: 100%;
+	background-color: #fff;
+	border: 2px solid #9B5DE5;
+}
+
+.circulos a:hover {
+	background-color: #DECAF6;
+}
+
+.circulos a:active {
+	background-color: #9B5DE5;
+}
+
+.circulos a:focus {
+	background-color: #9B5DE5;
+}
+
+/*-----BIENVENIDE-----*/
+
+#bienvenide {
+	padding: 10%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+.main-home h1 {
+	font-weight: bold;
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+.main-home .texto-principal{
+	width: 45%;
+	max-width: 600px;
+}
+
+.img-bienvenide {
+	width: 45%;
+	height: 405px;
+	background-image: url(img/home/bienvenide-home.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	animation: imagen-bienvenide alternate 1.8s infinite ease-in-out;
+	display: flex;
+	align-items: center;
+}
+
+@keyframes imagen-bienvenide{
+	0%{ 
+		background-image: url("img/home/bienvenide-home.png");}
+	50%{ 
+		background-image: url("img/home/bienvenide-home2.png");}
+	100%{
+		background-image: url("img/home/bienvenide-home.png");}
+}
+
+.flecha{
+	width: 15%;
+	height: auto;
+	position: absolute;
+	top: 490px;
+	left: 135px;
+	padding-top: 50px;
+	padding-left: 60px;
+}
+
+
+/*-----Valores-----*/
+
+#valores {
+	width: 100%;
+	background-color: rgba(113, 228, 209,0.5);
+	padding: 15% 10%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+.texto-valores {
+	max-width: 600px;
+}
+
+.iconos-valores {
+	display: flex;
+}
+
+.iconos-valores img{
+	width: auto;
+	height: auto;
+}
+
+.iconos-valores li{
+	width: 31%;
+	color: #4E4E4E;
+	font-weight: bold;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px 30px 0px 30px;
+}
+
+/*-----CONTENIDO-----*/
+
+#contenido-seccion {
+	padding: 10%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+#contenido-seccion h2 {
+	text-align: center;
+}
+
+#contenido-seccion p{
+	text-align: center;
+	max-width: 600px;
+}
+
+.contenido-iconos {
+	width: 100%;
+	display: flex;
+	gap: 2%;
+}
+
+.contenido-iconos li {
+	width: 23%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 3% 1%;
+	box-sizing: border-box;
+	border: solid #9B5DE5 3px;
+	border-radius: 30px;
+	background-color: #fff;
+}
+
+.contenido-iconos a {
+	color: #9B5DE5;
+	font-size: 20px;
+	padding: 10px 15px;
+}
+
+.contenido-iconos a:hover {
+	color: #fff;
+	background-color: #9B5DE5;
+	padding: 10px 15px;
+	border-radius: 30px;
+}
+
+.contenido-iconos img{
+	width: auto;
+	height: auto;
+}
+
+/*-----COMUNIDAD-----*/
+
+#comunidad {
+	padding: 10%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	gap: 10%;
+	background-color: rgba(255, 224, 0, 0.4);
+}
+
+#comunidad article {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#comunidad a {
+	background-color: #9B5DE5;
+	color: #fff;
+	padding: 15px 25px;
+	border-radius: 40px;
+	font-size: 20px;
+	margin-top: 50px;
+}
+
+#comunidad a:hover {
+	opacity: 0.8;
+}
+
+.imagen-comunidad {
+	width: 45%;
+	height: 441px;
+	background-image: url(img/home/foro-home.png);
+	background-size: 100%;
+	animation: imagen-home-comunidad alternate 1s infinite ease-in-out;
+	background-repeat: no-repeat;
+}
+
+@keyframes imagen-home-comunidad{
+	0%{ 
+		background-image: url("img/home/foro-home.png");}
+	50%{ 
+		background-image: url("img/home/foro-home2.png");}
+	100%{
+		background-image: url("img/home/foro-home.png");}
+}
+
+/*-----MI CICLO------*/
+
+.main-home #mi-ciclo {
+	padding: 10%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+}
+
+.main-home #mi-ciclo h2 {
+	padding-bottom: 0px;
+	text-align: center;
+}
+
+.main-home .mi-ciclo-iconos {
+	display: flex;
+	justify-content: center;
+	gap: 2%;
+}
+
+.main-home .mi-ciclo-iconos li {
+	width: 31.33%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.main-home .mi-ciclo-iconos img{
+	width: auto;
+	height: auto;
+}
+
+.main-home .mi-ciclo-iconos h3 {
+	font-size: 20px;
+}
+
+.main-home .mi-ciclo-iconos p {
+	font-size: 18px;
+	text-align: center;
+}
+
+.main-home #mi-ciclo a {
+	background-color: #9B5DE5;
+	color: #fff;
+	padding: 15px 25px;
+	border-radius: 40px;
+	font-size: 26px;
+	margin-top: 50px;
+}
+
+.main-home #mi-ciclo a:hover {
+	opacity: 0.7;
+}
+
+/*-----DISFRUTA-----*/
+
+#disfruta {
+	padding: 10% 10% 0px;
+	box-sizing: border-box;
+}
+
+#disfruta article {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+#disfruta h2 {
+	text-align: center;
+	padding-bottom: 0px;
+}
+
+#disfruta p {
+	max-width: 600px;
+	text-align: center;
+}
+
+.imagen-disfruta {
+	width: 100%;
+	height: 486px;
+	background-image: url(img/home/disfruta-home.png);
+	background-size: 100%;
+	animation: imagen-disfruta alternate 1.5s infinite ease-in-out;
+	background-repeat: no-repeat;
+}
+
+@keyframes imagen-disfruta{
+	0%{ 
+		background-image: url("img/home/disfruta-home.png");}
+	50%{ 
+		background-image: url("img/home/disfruta-home2.png");}
+	100%{
+		background-image: url("img/home/disfruta-home.png");}
+}
+
+
+/*--------------------------------------------------INICIAR SESIÓN----------------------------------------------------*/
+
+/*-----------------MAIN-----------------*/
+
+.main-inicio-sesion {
+	background-image: url("img/iniciar-sesion/fondo.inicio-sesion.png");
+	background-size: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 10%;
+	box-sizing: border-box;
+	animation: fondo-inicio-sesion alternate 1.5s infinite ease-in-out;
+}
+
+@keyframes fondo-inicio-sesion{
+	
+	0%{
+		background-image: url("img/iniciar-sesion/fondo.inicio-sesion.png");}
+	50%{
+		background-image: url("img/iniciar-sesion/fondo.inicio-sesion2.png");}
+	100%{
+		background-image: url("img/iniciar-sesion/fondo.inicio-sesion3.png");}
+}
+
+.main-inicio-sesion h1{
+	font-size: 35px;
+	display: flex;
+	justify-content: center;
+}
+.main-inicio-sesion p{
+	font-size: 18px;
+	text-align: center;
+}
+
+.iniciar {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.iniciar img{
+	width: auto;
+	height: auto;
+}
+
+.main-inicio-sesion .cuadrado {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255,255,255, 0.9);
+	padding: 50px 40px 80px;
+	box-sizing: border-box;
+	width: 360px;
+	height: 650px;
+	border-radius: 40px;
+	box-shadow: 3px 10px 15px rgba(0,0,0, 0.3);
+}
+
+.main-inicio-sesion article {
+	position: none;
+}
+
+.main-inicio-sesion form{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.main-inicio-sesion input {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(187, 192, 207, 30%);
+	border-radius: 50px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 18px;
+	padding-left: 30px;
+	border: none;
+}
+
+/*-----Boton.crear cuenta------*/
+
+.crear-usuario p{
+	font-size: 16px;
+}
+.crear-usuario a{
+	font-size: 16px;
+}
+
+.crear-usuario a {
+	color: #9B5DE5;
+}
+.crear-usuario a:hover {
+	color:#71E4D1;
+	transition-duration: 0.25s;
+}
+.crear-usuario a:active {
+	color: #9B5DE5;
+}
+
+
+/*-----Boton.iniciar------*/
+
+.main-inicio-sesion .entrar {
+	width: 100%;
+	height: auto;
+	background-color: #9B5DE5;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 50px;
+	padding: 15px 40px 15px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	border: 2px solid #9B5DE5;
+	cursor: pointer;
+}
+
+.main-inicio-sesion .entrar:hover {
+	color: #9B5DE5;
+	background-color: #fff;
+	transition-duration: 0.25s;
+	border-radius: 60px;
+	border: 2px solid #9B5DE5;
+}
+
+.main-inicio-sesion .entrar:active {
+	color: #9B5DE5;
+	background-color: #fff;
+	border: 2px solid #9B5DE5;
+}
+
+/*-----Boton. Olvidaste usuario-contraseña------*/
+
+.olvidaste-usuario {
+	font-size: 18px;
+	color: #00B295;
+	justify-content: center;
+	text-align: center;
+}
+.olvidaste-usuario:hover {
+	color:#9B5DE5;
+	transition-duration: 0.25s;
+}
+.olvidaste-usuario:active {
+	color: #9B5DE5;
+}
+
+.text-olvidarusuario{
+	display: flex;
+	align-content: center;
+	text-align: center;
+}
+
+.caja{
+	width: 100%;
+	display: flex;
+	align-content: flex-start;
+}
+.caja input{
+	width: 5%;
+	display: flex;
+	align-items: flex-start;
+}
+
+.caja label{
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+	padding-bottom: 11px;
+}
+
+
+/*--------------------------------------------RESGISTRAR--------------------------------------------*/
+/*-----------------MAIN-----------------*/
+
+.main-registrar {
+	background-image: url("img/registrar/fondo.registrar.png");
+	display: flex;
+	justify-content: center;
+	background-size: 100%;
+	padding: 0px;
+	margin: 0px;
+	animation: fondo alternate 3s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes fondo{
+	0%{
+		background-image: url("img/registrar/fondo.registrar.png");
+	}
+
+	25%{
+		background-image: url("img/registrar/fondo.registrar2.png");
+	}
+
+	75%{
+		background-image: url("img/registrar/fondo.registrar3.png");
+	}
+
+	100%{
+		background-image: url("img/registrar/fondo.registrar4.png");
+	}
+}
+
+.main-registrar img{
+	width: auto;
+	height: auto;
+}
+
+.main-registrar section {
+	width: 100%;
+	height: 1080px;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*-----Carrusel------*/
+
+.carrusel-registro {
+	max-width: 380px;
+	height: 818px;
+	overflow: hidden; /*esto es lo que hace que se pueda ver una card a la vez*/
+	display: flex;
+	position: absolute;
+	top: 0;/*para que quede pegado al borde superior de la pantalla*/
+}
+
+/*-----Contenedor cards------*/
+
+.contenedor-cuadrado {
+	width: 380px;
+	max-width: 380px;
+	height: 818px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.espacio {
+	height: 150px;/*el espacio arriba de la card para que el elemento empiece donde empieza la página y el link te lleve ahi, sin moverse para abajo*/
+	width: 380px;
+}
+
+/*-----Cuadrado------*/
+
+.main-registrar .cuadrado {
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255,255,255, 0.9);
+	padding: 50px 40px 80px;
+	box-sizing: border-box;
+	width: 360px;
+	height: 650px;
+	min-width: 270px;
+	border-radius: 40px;
+	box-shadow: 3px 10px 15px rgba(0,0,0, 0.3);
+	position: relative;/*es para que las flechas se muevan en base al cuadrado y para que haya espacio abajo para el box-shadow*/
+	bottom: 18px;
+}
+
+
+/*-----Flechas------*/
+
+.flechas {
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+	height: auto;
+	position: absolute;
+	top: 9.5%;
+}
+
+.flecha-no {
+	visibility: hidden;
+}
+
+/*-----Texto------*/
+
+.texto-registro {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 20px;
+}
+
+.main-registrar h1{
+	font-size: 35px;
+	text-align: center;
+}
+
+.main-registrar p{
+	font-size: 15px;
+	text-align: center;
+}
+
+.main-registrar .pasos {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #00B295;
+}
+
+.main-registrar .texto-bold{
+	font-weight: bold;
+}
+
+/*-----Form input------*/
+
+.main-registrar form{
+	width: 100%;
+	max-height: 280px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.main-registrar form input {
+	width: 100%;
+	height: 50px;
+	background-color:rgba(187, 192, 207, 30%);
+	border-radius: 50px;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+
+/*-----Boton-siguiente------*/
+
+.main-registrar .boton-siguiente{
+	width: 100%;
+	height: auto;
+	background-color:#9B5DE5;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 50px;
+	padding: 15px 40px 15px 40px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #9B5DE5;
+}
+
+.main-registrar .boton-siguiente:hover {
+	color: #9B5DE5;
+	background-color: #fff;
+	transition-duration: 0.25s;
+	border-radius: 60px;
+	border: 2px solid #9B5DE5;
+}
+
+.main-registrar .boton-siguiente:active {
+	color: #9B5DE5;
+	background-color: #fff;
+}
+
+#cuadrado-registro-1 .boton-siguiente, #cuadrado-registro-2 .boton-siguiente, #cuadrado-registro-3 .boton-siguiente, #cuadrado-registro-5 .boton-siguiente {
+	margin-top: 50px;
+}
+
+#cuadrado-registro-6 .boton-siguiente {
+	margin-top: 10px;
+}
+
+/*-----Fechas------*/
+
+#Nacimiento, #ultimo-periodo{
+	padding: 5px;
+}
+
+/*-----Boton no recuerdo------*/
+
+.main-registrar .caja-norecuerdo {
+	width: 100%;
+	height: 20px;
+	display: flex;
+	align-content: center;
+	padding-left: 20px;
+	gap: 20px;
+}
+
+.main-registrar .caja-norecuerdo input{
+	width: 20px;
+	height: 20px;
+	align-self: center;
+}
+
+/*-----Boton.no.ciclo------*/
+
+.main-registrar .boton-no-ciclo{
+	width: 100%;
+	height: auto;
+	background-color:#fff;
+	color: #9B5DE5;
+	font-weight: bold;
+	border-radius: 50px;
+	border: 2px solid #9B5DE5;
+	padding: 15px 40px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-registrar .boton-no-ciclo:hover {
+	background-color: #9B5DE5;
+	color: #fff;
+	transition-duration: 0.10s;
+	border-radius: 60px;
+	border: 2px solid #9B5DE5;
+}
+
+.main-registrar .boton-no-ciclo:active {
+	color: #9B5DE5;
+	background-color: #fff;
+	border: 2px solid #9B5DE5;
+}
+
+/*-----Boton-ir-inicio------*/
+
+.main-registrar .boton-ir-inicio{
+	height: auto;
+	background-color:#9B5DE5;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 50px;
+	padding: 15px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #9B5DE5;
+}
+
+.main-registrar .boton-ir-inicio:hover {
+	color: #9B5DE5;
+	background-color: #fff;
+	transition-duration: 0.25s;
+	border-radius: 60px;
+	border: 2px solid #9B5DE5;
+}
+
+.main-registrar .boton-ir-inicio:active {
+	color: #9B5DE5;
+	background-color: #fff;
+	border: 2px solid #9B5DE5;
+}
+
+/*-----------formulario anticonceptivos-------------*/
+
+
+.main-registrar #cuadrado-registro-6 form{
+	height: 150px;
+}
+
+.main-registrar #cuadrado-registro-6 .anticonceptivos{
+	height: 150px;
+	width: 100%;
+	font-weight: bold;
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items:flex-start;
+	gap: 5px;
+}
+
+.main-registrar #cuadrado-registro-6 .anticonceptivos span{
+	display: flex;
+	align-items: center;
+	height: 15px;
+	width: auto;
+	gap: 10px;
+}
+
+.main-registrar #cuadrado-registro-6 .anticonceptivos input{
+	width: 15px;
+	height: 15px;
+}
+
+.main-registrar #cuadrado-registro-6 .anticonceptivos label:hover{
+	color: #828282;
+	transition-duration: 0.25s;
+}
+
+/*--------------------------------------------------ANTICONCEPTIVOS----------------------------------------------------*/
+
+/*-----------------MAIN-----------------*/
+
+.main-anticonceptivos {
+	width: 100%;
+	height: auto;
+	padding: 5% 10%;/*para que todo tenga el mismo margen a los costados*/
+	box-sizing: border-box;
+	background-image: url("img/anticonceptivos/fondo.anticonceptivos.png");
+	background-size: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*-----------Boton-atras----------*/
+
+.botton-atras {
+	display: flex;
+	justify-content: flex-start;
+	gap: 10px;
+	align-items: center;
+	align-self: flex-start;
+	padding-top: 50px;
+}
+
+.botton-atras img{
+	width: auto;
+	height: auto;
+}
+
+.botton-atras p{
+	font-weight: bold;
+	font-size: 18px;
+	color: #959595;
+}
+
+.botton-atras a{
+	padding: 0px 10px;
+	color: #959595;
+}
+
+.botton-atras a:hover{
+	color: #DEE1E9;
+	transition-duration: 0.15s;
+}
+
+/*-----BANNER-----*/
+
+.banner {
+	max-width: 1536px;/*es el ancho máximo que van a ocupar las cosas a 1920px, cuando se sigue agrandando la pantalla quedan en ese tamaño centradas*/
+}
+
+.banner img {
+	width: 100%;/*para que cuando se achique la pantalla el banner se achique también, si le ponemos ancho fijo va a desbordar*/
+	height: auto;
+}
+/*-----BANNER-----*/
+
+.main-anticonceptivos .banner {
+	padding: 0px;
+}
+
+.main-anticonceptivos .banner img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 50px;
+}
+
+
+/*-----galería-----*/
+
+.main-anticonceptivos .galeria {
+	width: 100%;
+	max-width: 1536px;/*es el ancho máximo que van a ocupar las cosas a 1920px, cuando se sigue agrandando la pantalla quedan en ese tamaño centradas*/
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.main-anticonceptivos .galeria a {
+	max-width: 280px;
+	height: 370px;
+	background-color: #9B5DE5;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 30px;
+	padding: 40px;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+
+.main-anticonceptivos .galeria img {
+	border-radius: 30px;
+	width: auto;
+	height: auto;
+}
+
+.main-anticonceptivos .galeria p {
+	color: #fff;
+	text-align: center;
+}
+
+
+/*--------------------------------------------------MI CICLO----------------------------------------------------*/
+
+/*-----------------MAIN-----------------*/
+
+.main-mi-ciclo {
+	background-image: url("img/mi-ciclo/fondo-mi.ciclo.png");
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 70px;
+}
+
+.main-mi-ciclo h1{
+	font-size: 40px;
+}
+
+.main-mi-ciclo h3 {
+	color:#676767;
+	font-size: 25px;
+}
+
+.banner {
+	padding: 0% 10%;
+}
+
+/*-----------Boton-atras----------*/
+
+.main-mi-ciclo .botton-atras {
+	display: flex;
+	width: auto;
+	justify-content: flex-start;
+	gap: 10px;
+	align-items: center;
+	align-self: flex-start;
+	padding-top: 120px;
+	padding-bottom: 0px;
+	padding-left: 200px; 
+}
+
+.main-mi-ciclo .botton-atras img{
+	width: auto;
+	height: auto;
+	padding-right: 10px;
+}
+.main-mi-ciclo .botton-atras p{
+	font-weight: bold;
+	font-size: 18px;
+	color: #959595;
+}
+.main-mi-ciclo .botton-atras a{
+	padding: 0px 10px;
+	color: #959595;
+}
+.main-mi-ciclo .botton-atras a:hover{
+	color: #DEE1E9;
+	transition-duration: 0.15s;
+}
+
+/*-----------CALENDARIO----------*/
+
+.calendario {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	width: 80%;
+	margin: 0px;
+}
+.calendario h1 {
+	text-align: center;
+}
+.calendario h3{
+	text-align: center;
+	padding: 30px;
+}
+.calendario div {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+}
+.calendario img {
+	width: 100%;
+	height: auto;
+	max-width: 800px;
+	border-radius: 30px;
+	box-shadow: 3px 5px 8px rgba(0,0,0, 0.3);
+	padding: 0px;
+	margin: 0px;
+}
+
+.notas h1{
+	color: #fff;
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+	padding-top: 20px
+}
+.notas {
+	width: 35%;
+	height: 200px;
+	background-color: #9B5DE5;
+	border-radius: 50px;
+	padding: 20px 50px 50px 50px;
+	display: flex;
+	flex-direction: column;
+	transition: width 2s, height 2s, margin 2s;
+    margin: 0px 50px 50px 0px auto 0;
+}
+.notas:hover{
+    width: 60%;
+    height: 605px;
+    margin: 0 auto;
+}
+
+.notas textarea{
+	width: 92%;
+	height: 35%;
+	padding: 20px;
+	border-radius: 30px;
+	transition: width 2s, height 2s, margin 2s;
+	margin: 100px 50px 50px 100px auto 0;
+}
+
+.notas textarea:hover{
+    height: 70%;
+    margin: 0 auto;
+}
+
+/*-----------VALOR-ESTADISTICAS----------*/
+
+#promedio-estadisticas {
+	background-color:rgba(113, 228, 209, 40%);
+	width: 100%;
+	height: 350px;
+	border-radius: 50px;
+	padding-top: 5%;
+	padding-bottom: 15%;
+	display: flex;
+	justify-content: center;
+	gap: 10%;
+	position: relative;
+}
+
+#promedio-estadisticas h1{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 50px;
+	align-items: baseline;
+}
+
+.promedio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 200px;
+}
+.promedio div{
+	display: flex;
+	gap: 30px;
+}
+.promedio img{
+	width: 80%;
+	height: auto;
+}
+.estadisticas-contenedor {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-right: 200px;
+}
+.estadisticas-contenedor img{
+	width: 80%;
+	height: auto;
+}
+
+
+/*-----------SÍNTOMAS----------*/
+.sintomas {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	width: 75%;
+	padding: 5%;
+	background-color:rgba(255, 255, 255, 80%);
+	border-radius: 50px;
+}
+
+.sintomas article {
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.sintomas li{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.sintomas h3{
+	font-size: 25px;
+	color: #717178;
+	padding-bottom: 30px;
+}
+
+.sintomas h1{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding-bottom:  20px;
+}
+
+.sintomas li p{
+	color: #717178;
+	font-size:18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.carrusel li p{
+	color: #717178;
+	font-size:18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*------------------------*/
+
+.sangrado {
+	display: flex;
+	justify-content: center;
+}
+.sangrado li {
+	padding: 0px 20px;
+}
+
+.sangrado img{
+	width: 100%;
+	height: auto;
+}
+
+.fluido {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 60px;
+}
+
+.fluido img{
+	width: 100%;
+	height: auto;
+}
+
+.sangrado img:hover {
+	background-color: #71E4D1;
+	border-radius: 50%;
+}
+
+.fluido img:hover {
+	background-color: #71E4D1;
+	border-radius: 50%;
+}
+
+.tarjeta-carrusel img:hover{
+	background-color: #71E4D1;
+	border-radius: 50%;
+}
+
+
+/*-----------------CARRUSEL--------------------*/
+#contenidocarusel, #contenidocarusel-two {
+	height: 200px;
+	overflow: hidden;
+}
+
+.carrusel{
+	height: 200px;
+	position: relative;
+}
+
+.tarjera-carrusel{
+	height: 100%;
+	padding: 20px 0px 20px 0px;
+}
+
+.tarjeta-carrusel img{
+	width: 100%;
+	height: auto;
+}
+
+.flechas-carrusel{
+	height: 5px;
+	width: 100%;
+	position: absolute;
+	top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+}
+.flechas-carrusel img{
+	width: 50%;
+	height: auto;
+}
+
+/*--------Animo---------*/
+.animo {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 60px;
+}
+#carrusel-2 li,img{
+	justify-content:flex-start;
+	width: 8%	
+}
+
+/*------Dolores-------*/
+
+.dolores {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 60px;
+}
+#carrusel-02 li,img{
+	justify-content:flex-start;
+	width: 8%	
+}
+
+/*-----------------INFO---------------*/
+.info{
+	padding-bottom: 100px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.info p {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	max-width: 600px;
+	line-height: 40px;
+}
+
+/*-----Boton +info-----*/
+
+.info a{
+	background-color: #9B5DE5;
+	color: #fff;
+	border-radius: 40px;
+	width: 280px;
+	padding: 15px 25px;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	border: 2px solid #9B5DE5;
+}
+.info a:hover {
+	background-color: #fff;
+	color: #9B5DE5;
+	border: 2px solid #9B5DE5;
+	opacity: 0.8;
+}
+
+/*-----FOOTER GENERAL----*/
+
+footer {
+	width: 100%;
+	background-color: #9B5DE5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3% 10%;
+	box-sizing: border-box;
+}
+
+.footer-secciones {
+	width: 100%;
+	max-width: 1416px;
+	display: flex;
+	justify-content: flex-start;
+	gap: 50px;
+}
+
+.footer-secciones a {
+	color: #fff;
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: 500;
+}
+
+.footer-secciones a:hover {
+	opacity: 0.7;
+	transition-duration: 0.50s;
+}
+
+h4 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+.red-social {
+	display: flex;
+	align-self: flex-end;
+	gap: 15px;
+}
+
+.red-social img{
+	width: auto;
+	height: auto;
+}
+
+/*-----------------FOOTER REGISTRO/INICIAR SESIÓN-----------------*/
+
+.footer-blanco {
+	background-color: #fff;
+}
+
+.footer-blanco .footer-secciones a {
+	color: #9B5DE5;
+}
+
+.footer-blanco h4 {
+	color: #9B5DE5;
+}
+
+/*RESPONSIVE TABLET*/
+
+@media screen and (max-width: 1200px) {
+
+	/*-----------------HEADER GENERAL-----------------*/
+
+	.logo {
+		width: 40%;
+		max-width: none;/*es para anular el max-width que tenía antes*/
+		display: flex;
+		justify-content: center;
+		order: 2;/*para que cambie de lugar quede en el centro del header*/
+	}
+
+	/*-----MENU-----*/
+
+	.menu {
+		width: 30%;
+		max-width: none;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		order: 1;/*para que cambie de lugar y quede a la izquierda en el header*/
+		position: relative;
+	}
+
+	/*-----MENU-HAMBURGUESA-----*/
+
+	.menu-hamburguesa {
+		display: flex;
+		height: 40px;
+		width: 50px;
+		padding: 15px 0px;/* es el mismo padding del header, asi ocupa todo el alto*/
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.menu-hamburguesa div{
+		width: 50px;
+		height: 4px;
+		background-color: #fff;
+	}
+
+	#botones-secciones {
+		display: none;
+	}
+
+	#botones-secciones {
+		flex-direction: column;
+		padding: 0px;
+		position: absolute;
+		top: 70px;
+	}
+
+	#botones-secciones a {
+		padding: 20px 70px 20px 20px;
+		border-radius: 0px;
+		display: block;
+	}
+
+	#botones-secciones a:hover {
+		background-color: #fff;
+		color: #9B5DE5;
+	}
+
+	.menu:hover #botones-secciones {
+		display: block;
+	}
+
+	/*-----MENU-CONTENIDO-SLIDE-----*/
+
+	#contenido-boton {
+		padding: 20px 70px 20px 20px;
+		border-radius: 0px;
+	}
+
+	#contenido:hover #contenido-boton {
+		padding: 20px 70px 20px 20px;
+		border-radius: 0px;
+	}
+
+	#contenido-slide {
+		top: 0px;
+		left: 172.067px;/*es para que el slide se ponga a la derecha de los botones principales, ahi podemos ir a los botones de comunidad y mi ciclo sin problema*/
+		border: 2px solid #9B5DE5;
+		border-top: none;
+	}
+
+	#contenido-slide a {
+		padding: 10px 20px 10px;
+		border-radius: 0px;
+		display: block;/*es para que el a ocupe todo el ancho del li y cambie de color todo el botón cuando hay hover, sino cambia solo el ancho del texto*/
+	}
+
+	#contenido:hover #contenido-slide{
+		display: block;
+	}
+
+	/*-----USUARIO-----*/
+
+	.usuario {
+		width: 30%;
+		max-width: none;/*es para anular el max-width que tenía antes*/
+		justify-content: flex-end;
+		align-items: center;
+		order: 3;/*para que se quede en la derecha del header*/
+	}
+
+	/*-----------------HEADER REGISTRO/INICIAR SESION-----------------*/
+
+	.header-blanco .menu-hamburguesa div{
+		background-color: #9B5DE5;
+	}
+
+	.header-blanco #botones-secciones a:hover {
+		background-color: #9B5DE5;
+		color: #fff;
+	}
+
+	/*-----MENU-CONTENIDO-SLIDE-----*/
+
+	.header-blanco #contenido-slide {
+		border: 2px solid #fff;
+	}
+
+/*--------------------------------------------------HOME----------------------------------------------------*/
+
+/*-----------------MAIN-HOME----------------*/
+
+	#bienvenide {
+		align-items: flex-start;
+		margin-top: 50px;
+		height: 500px;
+	}
+	
+	#valores{
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.texto-valores{
+		width: 70%;
+		text-align: center;
+	}
+	
+	.iconos-valores img{
+		width: 70%;
+		height: auto;
+	}
+	
+	.main-home h1{
+		font-size: 30px;
+	}
+	
+	.main-home h2{
+		font-size: 30px;
+	}
+	
+	.main-home p{
+		font-size: 18px;
+	}
+	
+	.flecha{
+		display: none;
+	}
+	
+	h3{
+		font-size: 10px;
+		text-aline: center;
+	}
+	
+	.contenido-iconos{
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+	}
+	
+	.contenido-iconos li{
+		width: 40%;
+	}
+	
+	.contenido-iconos img{
+		width: 70%;
+	}
+	
+	.contenido-iconos a {
+		font-size: 15px;
+	}
+	
+	#comunidad {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#comunidad article{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#mi-ciclo .mi-ciclo-iconos img{
+		width: 70%;
+	}
+	
+	/*-----CÍRCULOS-----*/
+
+	.circulos {
+		display: none;
+	}
+	
+	/*--------------------------------------------------INICIAR SESIÓN----------------------------------------------------*/
+	
+	.main-inicio-sesion {
+		background-size: auto;
+	}
+
+
+
+/*--------------------------------------------------MI CICLO----------------------------------------------------*/
+.main-mi-ciclo {
+		padding: 35px 0px;
+	}
+	.main-mi-ciclo h1 {
+		font-size: 40px;
+		padding-bottom: 30px;
+	}
+	.main-mi-ciclo main h3 {	
+		padding: 10px 0px 20px 0px;
+	}
+	.main-mi-ciclo p {
+		font-size:18px;
+	}
+
+	/*-----------Boton-atras----------*/
+	.botton-atras {
+		padding: 50px 80px 0px 80px;
+	}
+	.botton-atras img{
+		width: 2%;
+		padding-right: 5px;
+	}
+	.botton-atras p{
+		font-size: 15px;
+	}
+		
+	.banner img{
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+
+	/*-----------CALENDARIO----------*/
+	.calendario{
+		padding: 0px 75px;
+	}
+	.calendario h1{
+		padding: 50px 0px 40px 0px;
+	}
+	.notas:hover{
+		width: 50%;
+		height: 370px;
+	}
+	
+	.notas{
+		width: 50%;
+		height: 200px;
+		padding: 20px 50px 50px 50px;
+	}
+	.notas h1{
+		font-size: 25px;
+		padding-bottom: 20px;
+		padding-top: 5px
+	}
+	.notas:hover{
+		width: 83%;
+		height: 290px;
+	}
+	.notas textarea:hover{
+		height: 65%;
+	}
+	
+	/*-----------SÍNTOMAS----------*/
+	.sintomas article{
+		padding: 0px 100px 0px 100px;
+	}
+	.sintomas h3{
+		font-size: 25px;
+		color: #717178;
+		padding: 30px 0px;
+	}
+	.sintomas h1{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		padding-bottom:  20px;
+	}
+	.sintomas li p{
+		color: #717178;
+		font-size:18px;
+		font-weight: bold;
+		text-align: center;
+		align-items: baseline;
+	}
+
+	.carrusel li p{
+		color: #717178;
+		font-size:18px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	/*------------------------*/
+	.sangrado {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 0px 200px 20px 200px;
+	}
+	.sangrado img{
+		width: 50%;
+		height: auto;
+	}
+	.fluido{
+		display: flex;
+		flex-direction: row;
+		justify-content:space-between;
+		padding: 0px 35px 40px 35px;
+	}
+	.fluido img{
+		width: 65%;
+		height: auto;
+	}
+	.sintomas img {
+		margin-bottom: 20px;
+	}
+	.sangrado img:hover {
+		background-color: #71E4D1;
+		border-radius: 50%;
+	}
+	.fluido img:hover {
+		background-color: #71E4D1;
+		border-radius: 50%;
+	}
+	.tarjeta-carrusel img:hover{
+		background-color: #71E4D1;
+		border-radius: 50%;
+	}
+
+	/*-----------------CARRUSEL--------------------*/
+	#contenidocarusel, #contenidocarusel-two {
+		height: 200px;
+		overflow: hidden;
+	}
+	.carrusel{
+		height: 200px;
+		position: relative;
+	}
+	.tarjera-carrusel{
+		height: 100%;
+		padding: 20px 0px 20px 0px;
+	}
+	.tarjeta-carrusel img{
+		width: 80%;
+		height: auto;
+	}
+	/*-----------fecha carrusel----------*/	
+	.flechas-carrusel{
+		height: 5px;
+		width:  980px;
+		position: absolute;
+		top: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px;
+	}
+	.flechas-carrusel img{
+		width: 50%;
+		height: auto;
+	}
+
+	/*--------Animo---------*/
+	.animo {
+		display: flex;
+		flex-direction: row;
+		padding: 0px 30px 0px 30px;
+	}
+	#carrusel-2 li,img{
+		width: 13%	
+	}
+	/*------Dolores-------*/
+	.dolores {
+		display: flex;
+		flex-direction: row;
+		padding: 0px 30px 0px 30px;
+	}
+	#carrusel-02 li,img{
+		width: 13%	
+	}
+	
+	/*-----------info----------*/
+	.info{
+		padding-top: 50px;
+		padding-bottom: 100px;
+		display: flex;
+		justify-content: center;
+	}
+	.info p{
+		line-height: 30px;
+		max-width: 38%;
+		padding-top: 0px;
+	}
+	.info a{
+		margin-top: 0px;
+	}
+
+
+}
+
+
+/*RESPONSIVE MOBILE*/
+
+@media screen and (max-width: 600px) {
+
+	
+	/*-----------------HEADER GENERAL-----------------*/
+	
+	/*-----USUARIO-----*/
+	
+	.anacleta {
+		display: none;
+	}
+	
+	
+
+	/*--------------------------------------------------HOME----------------------------------------------------*/
+
+/*-----------------MAIN-HOME----------------*/
+
+	.main-home p{
+		font-size: 14px;
+	}
+	
+	#bienvenide {
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+	
+	#bienvenide article{
+		width: 100%;
+	}
+	
+	#comunidad{
+		height: auto;
+	}
+	
+	/*--------------------------------------------------ANTICONCEPTIVOS----------------------------------------------------*/
+	
+	/*-----BANNER-----*/
+
+	.banner {
+		display: none;
+	}
+	
+	/*-----ANTICONCEPTIVOS-----*/
+
+	.main-anticonceptivos .galeria {
+		flex-direction: column;
+		align-content: center;
+		margin-top: 100px;
+	}
+
+	.main-anticonceptivos .galeria a {
+		width: 80%;
+		padding: 5%;
+	}
+
+	.main-anticonceptivos .galeria img {
+		width: 100%;
+	}
+
+	.main-anticonceptivos .galeria p {
+	font-size: 18px;
+}
+	
+	/*--------------------------------------------------INICIAR SESIÓN----------------------------------------------------*/
+	
+	.main-inicio-sesion {
+		background-size: auto;
+	}
+	
+	/*-----FOOTER GENERAL----*/
+
+	footer {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer-secciones {
+		display: none;
+	}
+	
+	.red-social {
+		align-self: center;
+	}
+	
+	/*--------------------------------------------------mi ciclo----------------------------------------------------*/
+
+	
+	.main-mi-ciclo {
+		padding: 10px 0px;
+	}
+	.main-mi-ciclo h1 {
+		padding-bottom: 20px;
+		font-size: 30px;
+	}
+	.main-mi-ciclo h3 {	
+		padding: 10px 0px 20px 0px;
+		font-size: 20px;
+	}
+	
+	/*-----------Boton-atras----------*/
+	.botton-atras {
+		padding: 70px 35px 0px 35px;
+	}
+	.botton-atras p{
+	font-size: 15px;
+}
+	.botton-atras img{
+		width: 3%;
+	}
+	
+	.banner img{
+		width: 50%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+	
+	/*-----------CALENDARIO----------*/
+	.calendario{
+		padding: 0px 35px;
+		justify-content: center;
+	}
+	.calendario h1{
+		padding-top: 35px;
+		padding-bottom: 0px;
+		margin: 0px;
+	}
+	.calendario img{
+		width: 100%;
+		height: auto;
+	}
+	.calendario div{
+		display: block;
+	}
+	
+	.notas{
+		width: 50%;
+		height: auto;
+		margin-top: 20px;
+		padding: 20px 50px 50px 50px;
+	}
+	.notas h1{
+		font-size: 25px;
+		padding-bottom: 20px;
+		padding-top: 10px
+	}
+	.notas:hover{
+		width: 80%;
+		height: 300px;
+		margin-top: 20px;
+	}
+	.notas textarea:hover{
+		height: 65%;
+	}
+	
+	/*-----------SÍNTOMAS----------*/
+	.sintomas article{
+		padding: 0px 40px;
+	}
+	.sintomas h3{
+		padding: 20px 0px;
+	}
+	.sintomas h1{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		padding:  0px;
+	}
+	.sintomas li p{
+		font-size: 9px;		
+	}
+	
+	/*------------------------*/
+	.sangrado {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 0px;
+	}
+	.sangrado li p{
+		font-size: 15px;
+	}
+	.sangrado img{
+		width: 50%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+	}
+	.fluido{
+		display: flex;
+		flex-direction: row;
+		justify-content:space-between;
+		padding: 0px 35px 0px 35px;
+	}
+	.fluido img{
+		width: 80%;
+		height: auto;
+	}
+	.sintomas img {
+		margin-bottom: 20px;
+	}
+	
+	/*-----------------CARRUSEL--------------------*/
+	#contenidocarusel, #contenidocarusel-two {
+		height: 80px;
+		overflow: hidden;
+	}
+	.carrusel{
+		height: 80px;
+		position: relative;
+	}
+	.tarjera-carrusel{
+		height: 50%;
+		padding: 20px 0px 20px 0px;
+	}
+	.tarjeta-carrusel img{
+		width: 80%;
+		height: auto;
+	}
+	
+	/*-----------fecha carrusel----------*/	
+	.flechas-carrusel{
+		height: 5px;
+		width:  530px;
+		top: 30px;
+	}
+	.flechas-carrusel img{
+		width: 50%;
+		height: auto;
+	}
+	
+	/*--------Animo---------*/
+	.animo {
+		display: flex;
+		flex-direction: row;
+		padding: 0px 30px 0px 30px;
+	}
+	#carrusel-2 li,img{
+		width: 13%	
+	}
+	
+	/*------Dolores-------*/
+	.dolores {
+		display: flex;
+		flex-direction: row;
+		padding: 0px 30px 0px 30px;
+	}
+	#carrusel-02 li,img{
+		width: 12%	
+	}
+	
+	/*-----------info----------*/
+	.info{
+		padding-top: 50px;
+		padding-bottom: 100px;
+		display: flex;
+		justify-content: center;
+	}
+	.info p{
+		line-height: 30px;
+		max-width: 75%;
+		padding-top: 0px;
+	}
+	.info a{
+		margin-top: 0px;
+	}
+	
+}
