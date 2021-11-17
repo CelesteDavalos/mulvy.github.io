@@ -286,7 +286,7 @@ html {
 
 .img-bienvenide {
 	width: 45%;
-	height: 405px;
+	height: 450px;
 	background-image: url(img/home/bienvenide-home.png);
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -303,15 +303,17 @@ html {
 	100%{
 		background-image: url("img/home/bienvenide-home.png");}
 }
+.flecha img{
+	width: 15%;
+	height: auto;
+}
 
 .flecha{
 	width: 15%;
 	height: auto;
 	position: absolute;
-	top: 490px;
-	left: 135px;
-	padding-top: 50px;
-	padding-left: 60px;
+	top: 560px;
+	left: 280px;
 }
 
 
@@ -329,7 +331,7 @@ html {
 }
 
 .texto-valores {
-	max-width: 600px;
+	max-width: 500px;
 }
 
 .iconos-valores {
@@ -442,7 +444,7 @@ html {
 }
 
 .imagen-comunidad {
-	width: 45%;
+	width: 100%;
 	height: 441px;
 	background-image: url(img/home/foro-home.png);
 	background-size: 100%;
@@ -471,7 +473,7 @@ html {
 }
 
 .main-home #mi-ciclo h2 {
-	padding-bottom: 0px;
+	padding-bottom: 30px;
 	text-align: center;
 }
 
@@ -487,6 +489,7 @@ html {
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
+	padding: 0px 20px;
 }
 
 .main-home .mi-ciclo-iconos img{
@@ -501,6 +504,7 @@ html {
 .main-home .mi-ciclo-iconos p {
 	font-size: 18px;
 	text-align: center;
+	max-width: 230px;
 }
 
 .main-home #mi-ciclo a {
@@ -519,7 +523,7 @@ html {
 /*-----DISFRUTA-----*/
 
 #disfruta {
-	padding: 10% 10% 0px;
+	padding: 2% 10% 0px;
 	box-sizing: border-box;
 }
 
@@ -543,7 +547,7 @@ html {
 
 .imagen-disfruta {
 	width: 100%;
-	height: 486px;
+	height: 480px;
 	background-image: url(img/home/disfruta-home.png);
 	background-size: 100%;
 	animation: imagen-disfruta alternate 1.5s infinite ease-in-out;
@@ -569,7 +573,7 @@ html {
 	background-size: 100%;
 	display: flex;
 	justify-content: center;
-	padding: 10%;
+	padding: 10.5%;
 	box-sizing: border-box;
 	animation: fondo-inicio-sesion alternate 1.5s infinite ease-in-out;
 }
@@ -647,7 +651,9 @@ html {
 }
 
 /*-----Boton.crear cuenta------*/
-
+.crear-usuario{
+	width: 100%;
+}
 .crear-usuario p{
 	font-size: 16px;
 }
@@ -793,7 +799,7 @@ html {
 
 .carrusel-registro {
 	max-width: 380px;
-	height: 818px;
+	height: 900px;
 	overflow: hidden; /*esto es lo que hace que se pueda ver una card a la vez*/
 	display: flex;
 	position: absolute;
@@ -834,6 +840,7 @@ html {
 	box-shadow: 3px 10px 15px rgba(0,0,0, 0.3);
 	position: relative;/*es para que las flechas se muevan en base al cuadrado y para que haya espacio abajo para el box-shadow*/
 	bottom: 18px;
+	top: 50px
 }
 
 
@@ -1002,6 +1009,7 @@ html {
 /*-----Boton-ir-inicio------*/
 
 .main-registrar .boton-ir-inicio{
+	width: 70%;
 	height: auto;
 	background-color:#9B5DE5;
 	color: #fff;
@@ -1071,7 +1079,7 @@ html {
 .main-anticonceptivos {
 	width: 100%;
 	height: auto;
-	padding: 5% 10%;/*para que todo tenga el mismo margen a los costados*/
+	padding: 5% 15%;/*para que todo tenga el mismo margen a los costados*/
 	box-sizing: border-box;
 	background-image: url("img/anticonceptivos/fondo.anticonceptivos.png");
 	background-size: 100%;
@@ -1088,7 +1096,7 @@ html {
 	gap: 10px;
 	align-items: center;
 	align-self: flex-start;
-	padding-top: 50px;
+	padding-top: 10px;
 }
 
 .botton-atras img{
@@ -1196,7 +1204,7 @@ html {
 }
 
 .banner {
-	padding: 0% 10%;
+	padding: 0% 15%;
 }
 
 /*-----------Boton-atras----------*/
@@ -1208,9 +1216,7 @@ html {
 	gap: 10px;
 	align-items: center;
 	align-self: flex-start;
-	padding-top: 120px;
-	padding-bottom: 0px;
-	padding-left: 200px; 
+	padding: 108px 300px 0px 285px;
 }
 
 .main-mi-ciclo .botton-atras img{
@@ -1238,7 +1244,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
-	width: 80%;
+	width: 70%;
 	margin: 0px;
 }
 .calendario h1 {
@@ -1284,7 +1290,7 @@ html {
 }
 .notas:hover{
     width: 60%;
-    height: 605px;
+    height: 550px;
     margin: 0 auto;
 }
 
@@ -1356,32 +1362,18 @@ html {
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
-	width: 75%;
-	padding: 5%;
+	width: 65%;
+	padding: 5% 3%;
 	background-color:rgba(255, 255, 255, 80%);
 	border-radius: 50px;
-	border: 5px solid red;
+	
+	position: relative;
 }
-
-.sintomas article {
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
-}
-
-.sintomas li{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-}
-
 .sintomas h3{
 	font-size: 25px;
 	color: #717178;
 	padding-bottom: 30px;
 }
-
 .sintomas h1{
 	display: flex;
 	justify-content: center;
@@ -1389,83 +1381,79 @@ html {
 	padding-bottom:  20px;
 }
 
-.sintomas li p{
-	color: #717178;
-	font-size:18px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.carrusel li p{
-	color: #717178;
-	font-size:18px;
-	font-weight: bold;
-	text-align: center;
-}
-
-/*------------------------*/
-
-.sangrado {
+/*---------------------*/
+.sintomas-sangrado .container{
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
+	justify-content:center;
 }
-.sangrado li {
-	padding: 0px 20px;
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px 40px;
+	justify-content:space-between;
+}
+.container .option_item{
+	display: block;
+	position: relative;
+	width: 115px;
+	height: 115px;
+}
+.container label{
+	padding: 0px 10px;
+}
+.option_item .option_inner{
+	width: 90%;
+	height: 90%;
+	background-color: #fff;
+	border-radius: 100px;
+	cursor: pointer;
+}
+.option_item .checkbox{
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	z-index: 1;
+	opacity: 1;
+	display:none;
 }
 
-.sangrado img{
+.icon img{
 	width: 100%;
 	height: auto;
+	border-radius: 50px;
 }
-
-.fluido {
-	display: flex;
-	justify-content: space-between;
-	padding: 0px 60px;
+.option_item p{
+	padding-top: 10px;
+	text-align: center;	
+	font-weight: bold;
+	font-size: 18px;
 }
-
-.fluido img{
-	width: 100%;
-	height: auto;
-}
-
-.sangrado img:hover {
+.option_item .option_inner:hover{
 	background-color: #71E4D1;
-	border-radius: 50%;
 }
-
-.fluido img:hover {
+.option_item .checkbox:checked ~ .option_inner{ /*Personaliza el selecionado */
 	background-color: #71E4D1;
-	border-radius: 50%;
 }
-
-.tarjeta-carrusel img:hover{
-	background-color: #71E4D1;
-	border-radius: 50%;
-}
-
 
 /*-----------------CARRUSEL--------------------*/
 #contenidocarusel, #contenidocarusel-two {
-	height: 200px;
-	overflow: hidden;
+	height: 140px;
+	overflow: hidden; 	/*Delimita lo visible y no visible del carrusel*/
+	padding: 0px;
 }
-
 .carrusel{
 	height: 200px;
 	position: relative;
 }
-
 .tarjera-carrusel{
 	height: 100%;
 	padding: 20px 0px 20px 0px;
 }
-
 .tarjeta-carrusel img{
 	width: 100%;
 	height: auto;
 }
-
 .flechas-carrusel{
 	height: 5px;
 	width: 100%;
@@ -1480,28 +1468,23 @@ html {
 	width: 50%;
 	height: auto;
 }
+/*-----carusel_sintomas----*/
 
-/*--------Animo---------*/
-.animo {
+#carrusel-02 .container{
 	display: flex;
-	justify-content: space-between;
-	padding: 0px 60px;
-}
-#carrusel-2 li,img{
+	flex-wrap: wrap;
 	justify-content:flex-start;
-	width: 8%	
 }
-
-/*------Dolores-------*/
-
-.dolores {
+#carrusel-022 .container{
 	display: flex;
-	justify-content: space-between;
-	padding: 0px 60px;
-}
-#carrusel-02 li,img{
+	flex-wrap: wrap;
 	justify-content:flex-start;
-	width: 8%	
+}
+#carrusel-02 .container label{
+	padding: 0px 15px;
+}
+#carrusel-022 .container label{
+	padding: 0px 15px;
 }
 
 /*-----------------INFO---------------*/
@@ -1825,7 +1808,7 @@ h4 {
 
 
 /*--------------------------------------------------MI CICLO----------------------------------------------------*/
-.main-mi-ciclo {
+	.main-mi-ciclo {
 		padding: 35px 0px;
 	}
 	.main-mi-ciclo h1 {
@@ -1840,8 +1823,14 @@ h4 {
 	}
 
 	/*-----------Boton-atras----------*/
-	.botton-atras {
-		padding: 50px 80px 0px 80px;
+	.main-mi-ciclo .botton-atras {
+    	display: flex;
+    	width: auto;
+    	justify-content: flex-start;
+    	gap: 10px;
+   		align-items: center;
+    	align-self: flex-start;
+		padding: 90px 60px 0px 60px;
 	}
 	.botton-atras img{
 		width: 2%;
@@ -1850,27 +1839,41 @@ h4 {
 	.botton-atras p{
 		font-size: 15px;
 	}
-		
-	.banner img{
+	/*--------Banner--------------*/
+	.main-mi-ciclo .banner {
+		padding: 0% 2%;
+		border: 5px solid blue;
+	}
+	.main-mi-ciclo .banner img{
 		width: 100%;
 		height: auto;
 		display: flex;
 		justify-content: center;
 		align-content: center;
+		border: 5px solid blue;
 	}
 
 	/*-----------CALENDARIO----------*/
-	.calendario{
-		padding: 0px 75px;
-	}
-	.calendario h1{
-		padding: 50px 0px 40px 0px;
-	}
-	.notas:hover{
-		width: 50%;
-		height: 370px;
+
+	.main-mi-ciclo section .calendario{
+		width: 0%;
+		padding: 0px;
 	}
 	
+	.main-mi-ciclo .calendario{
+		width: 75%;
+		height:auto; 
+		padding: 0px;
+	}
+	.main-mi-ciclo .calendario h1{
+		padding: 0px;
+		margin: 0px;
+	}
+	.main-mi-ciclo .calendario img{
+		padding: 0px;
+		width: 110%;
+		height: auto;
+	}
 	.notas{
 		width: 50%;
 		height: 200px;
@@ -1889,27 +1892,55 @@ h4 {
 		height: 65%;
 	}
 	
+	/*-----------VALORES----------*/
+	#promedio-estadisticas {
+		height: 1000px;
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.main-mi-ciclo .promedio {
+		padding: 50px 0px 0px 0px;
+	}
+	.main-mi-ciclo .promedio img {
+		width: 60%;
+		height: auto;
+	}
+	.main-mi-ciclo .estadisticas-contenedor {
+		padding: 0px 0px 100px 0px;
+	}
+	.main-mi-ciclo .estadisticas-contenedor img{
+		width: 80%;
+		height: auto;
+	}
+	
 	/*-----------SÍNTOMAS----------*/
-	.sintomas article{
-		padding: 0px 100px 0px 100px;
+	.sintomas{
+		width: 100%;
 	}
-	.sintomas h3{
-		font-size: 25px;
+	.main-mi-ciclo .sintomas article{
+		padding: 0px 30px;
+	}
+	.main-mi-ciclo .sintomas h3{
+		font-size: 20px;
 		color: #717178;
-		padding: 30px 0px;
+		padding: 0px 0px 15px 0px;
 	}
-	.sintomas h1{
+	.main-mi-ciclo .sintomas h1{
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		padding-bottom:  20px;
+		padding-bottom:  0px;
 	}
-	.sintomas li p{
-		color: #717178;
-		font-size:18px;
-		font-weight: bold;
-		text-align: center;
-		align-items: baseline;
+	.main-mi-ciclo .sintomas li p{
+		font-size: 10px;
+		padding: 0px;
+	}
+	.main-mi-ciclo .sintomas li img{
+		padding: 0px;
+		margin: 0px;
 	}
 
 	.carrusel li p{
@@ -1974,18 +2005,15 @@ h4 {
 		height: auto;
 	}
 	/*-----------fecha carrusel----------*/	
-	.flechas-carrusel{
+	.main-mi-ciclo .flechas-carrusel{
 		height: 5px;
-		width:  980px;
+		width:  550px;
 		position: absolute;
-		top: 50px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		top: 30px;
 		padding: 5px;
 	}
-	.flechas-carrusel img{
-		width: 50%;
+	.main-mi-ciclo .flechas-carrusel img{
+		width: 40%;
 		height: auto;
 	}
 
@@ -2009,21 +2037,9 @@ h4 {
 	}
 	
 	/*-----------info----------*/
-	.info{
-		padding-top: 50px;
-		padding-bottom: 100px;
-		display: flex;
-		justify-content: center;
-	}
-	.info p{
-		line-height: 30px;
-		max-width: 38%;
+	.main-mi-ciclo .info{
 		padding-top: 0px;
 	}
-	.info a{
-		margin-top: 0px;
-	}
-
 
 }
 
@@ -2301,3 +2317,7 @@ h4 {
 	}
 	
 }
+
+
+
+
